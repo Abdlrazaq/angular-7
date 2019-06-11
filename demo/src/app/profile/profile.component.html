@@ -1,0 +1,17 @@
+<app-header></app-header><br>
+<div class="container">
+
+  <h5>All registered user:</h5>
+  <ul>
+    <li *ngFor="let user of users">
+      <span class="text-danger">Name:</span> {{user.firstname}} {{user.lastname}} <br>
+      <span class="text-danger">Email:</span> {{user.email}} <br>
+      <span class="text-danger">birthday:</span> {{user.birthday}} <br>
+      <span class="text-danger">postnumber:</span> {{user.postnumber}} <br> <br>
+      <button class="nav-link" routerLink="/update" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+        class="text-info">Update</button> <span>-</span>
+      <button (click)="deleteUser(user._id)" class="text-danger">Delete</button> <hr>
+    </li>
+  </ul>
+
+</div>

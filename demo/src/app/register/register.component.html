@@ -1,0 +1,143 @@
+<app-header></app-header>
+
+    <div class="container"> <br>
+
+
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+
+        <div class="form-row">
+
+          <div class="form-group col-md-6">
+
+            <label for="name">Name</label>
+
+            <input type="text" formControlName="firstname" class="form-control" id="name" placeholder="Name" [ngClass]="{ 'is-invalid': isSubmitted && f.firstname.errors }" />
+            <div *ngIf="isSubmitted && f.firstname.errors" class="invalid-feedback">
+                <div *ngIf="f.firstname.errors.required">First Name is required</div>
+            </div>
+
+          </div>
+
+          <div class="form-group col-md-6">
+
+            <label for="mellanname">mellanname</label>
+
+            <input type="text" class="form-control" formControlName="mellanname" id="mellanname"
+              aria-describedby="emailHelp" placeholder="Enter mellanname" [ngClass]="{ 'is-invalid': isSubmitted && f.mellanname.errors }" />
+              <div *ngIf="isSubmitted && f.mellanname.errors" class="invalid-feedback">
+                  <div *ngIf="f.mellanname.errors.required"></div>
+              </div>
+
+          </div>
+
+          <div class="form-group col-md-6">
+
+            <label for="lastname">Lastname</label>
+
+            <input type="text" formControlName="lastname" class="form-control" id="lastname" placeholder="Lastname">
+
+          </div>
+
+          <div class="form-group col-md-6">
+
+            <label for="inputEmail">Email</label>
+
+            <input type="email" formControlName="email" class="form-control" id="inputEmail" placeholder="Email">
+
+          </div>
+
+          <div class="form-group col-md-6">
+
+            <label for="inputPassword">Password</label>
+
+            <input type="password" type="password" formControlName="password" class="form-control" id="inputPassword"
+              placeholder="Password">
+
+          </div>
+
+          <div class="form-group col-md-6">
+
+            <label for="birthday">birthday</label>
+  
+            <input type="date" class="form-control" formControlName="birthday" id="birthday" aria-describedby="emailHelp"
+              placeholder="Enter birthday">
+  
+          </div>
+
+        </div>
+
+        <div class="form-row">
+
+        <div class="form-group col-md-6">
+            <label for="Addresslinefaktura">Fakturering addres</label>
+
+            <input type="text" class="form-control" formControlName="addresslinefaktura" id="Addresslinefaktura"
+              aria-describedby="emailHelp" placeholder="Addresslinefaktura">
+        </div>
+        <div class="form-group col-md-6">
+
+            <label for="postnumber">post number</label>
+  
+            <input type="text" formControlName="postnumber" class="form-control" id="postnumber"
+              placeholder="post number">
+  
+          </div>
+          <div class="form-group col-md-6">
+
+              <label for="invoicecity"> invoice City</label>
+    
+              <input type="text" formControlName="invoicecity" class="form-control" id="invoicecity"
+                placeholder="invoicecity">
+    
+            </div>
+            <div class="form-group col-md-6">
+
+                <label for="invoicecountry"> country</label>
+     
+                <input type="text" formControlName="invoicecountry" class="form-control" id="invoicecountry"
+                  placeholder="invoicecountry">
+     
+              </div>
+              <div class="form-group col-md-6">
+
+                  <label for="Addressline">Addressline</label>
+        
+                  <input type="text" class="form-control" formControlName="addressline" id="Addressline"
+                    aria-describedby="emailHelp" placeholder="Addressline">
+        
+                </div>
+                <div class="form-group col-md-6">
+
+                    <label for="inputCity">City</label>
+        
+                    <input type="text" formControlName="city" class="form-control" id="inputCity" placeholder="City">
+        
+                  </div>
+        
+        
+                  <div class="form-group col-md-6">
+        
+                    <label for="inputZip">Zip</label>
+        
+                    <input type="text" formControlName="zipcode" class="form-control" id="inputZip" placeholder="Zip">
+        
+                  </div>
+        
+                  <div class="form-group col-md-6">
+        
+                    <label for="inputAddress">Address</label>
+        
+                    <input type="text" class="form-control" formControlName="addressline" id="inputAddress"
+                      placeholder="123 Main Väst">
+        
+                  </div>
+                  <div class="form-group col-md-6">
+
+                      <input class="btn btn-info" type="submit" value="Register">
+
+                    </div>
+        </div>
+      </form>
+
+    </div>
